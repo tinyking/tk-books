@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     },
     github: false,
   },
-  unifont: {
+  fonts: {
     providers: {
       google: false,
       googleicons: false,
