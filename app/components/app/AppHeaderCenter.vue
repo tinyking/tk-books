@@ -4,17 +4,28 @@ import type { ContentNavigationItem } from '@nuxt/content'
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 const menuItems = computed(() => {
-  if (!navigation?.value) return []
-  return navigation.value.map((item) => ({
-    label: item.title,
-    icon: item.icon || item.navigation?.icon,
-    to: item.path,
-    children: item.children?.map((child) => ({
-      label: child.title,
-      icon: child.icon || child.navigation?.icon,
-      to: child.path,
-    })),
-  }))
+  const items = navigation?.value
+    ? navigation.value
+        .filter((item) => item.path !== '/yi-zhang-tu')
+        .map((item) => ({
+          label: item.title,
+          icon: item.icon || item.navigation?.icon,
+          to: item.path,
+          children: item.children?.map((child) => ({
+            label: child.title,
+            icon: child.icon || child.navigation?.icon,
+            to: child.path,
+          })),
+        }))
+    : []
+
+  items.push({
+    label: '一张图系列',
+    icon: 'i-lucide-image',
+    to: '/yi-zhang-tu',
+  })
+
+  return items
 })
 </script>
 
