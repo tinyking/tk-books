@@ -1,14 +1,14 @@
 export default defineNuxtConfig({
   extends: ["docus"],
   site: {
-    name: "阅微书屋",
+    name: "阅微阁",
   },
   appConfig: {
     header: {
-      title: "阅微书屋",
+      title: "阅微阁",
     },
     seo: {
-      title: "阅微书屋",
+      title: "阅微阁",
       description: "个人成长与日常学习中的图书收藏",
     },
     github: false,

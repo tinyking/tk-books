@@ -1,12 +1,12 @@
 ---
 seo:
-  title: 阅微书屋
+  title: 阅微阁
   description: 个人成长与日常学习中的图书收藏，记录每一本值得反复品读的好书。
 ---
 
 ::u-page-hero
 #title
-阅微书屋
+阅微阁
 
 #description
 记录个人成长与日常学习中的每一本好书。
@@ -27,7 +27,7 @@ seo:
 
 ::u-page-section
 #title
-关于阅微书屋
+关于阅微阁
 
 #features
   :::u-page-feature
